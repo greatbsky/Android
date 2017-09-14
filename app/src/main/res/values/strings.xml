@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">起点</string>
+    <string name="edit_message">请输入信息</string>
+    <string name="button_send">发送</string>
+    <string name="chooser_title">请选择！</string>
+    <string name="send_to">发送</string>
 </resources>

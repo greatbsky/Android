@@ -15,17 +15,19 @@ android {
 
     }
 //    没起作用，需排查
-//    signingConfigs {
-//        release {
-//            storeFile file("release.keystore")
-//            storePassword "xxx"
-//            keyAlias "geniuskey"
-//            keyPassword "xxxx"
-//        }
+    signingConfigs {
+        release {
+            storeFile file("release.keystore")
+            storePassword "999"
+            keyAlias "geniuskey"
+            keyPassword "999"
+        }
     }
     buildTypes {
         release {
-            minifyEnabled false
+			signingConfig signingConfigs.release
+			shrinkResources true
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -39,4 +41,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
     testCompile 'junit:junit:4.12'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
 }

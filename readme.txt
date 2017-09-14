@@ -48,7 +48,7 @@ apksigner verify app\build\outputs\apk\app-release.apk
 
 
 
-------------------------------------ÅäÖÃGradleÒÔÇ©ÊğAPK(²âÊÔÊ§°Ü)
+------------------------------------ÅäÖÃGradleÒÔÇ©ÊğAPK
 android {
     ...
     defaultConfig { ... }
@@ -62,10 +62,33 @@ android {
     }
     buildTypes {
         release {
+			shrinkResources true
+            minifyEnabled true
             signingConfig signingConfigs.release
+            
             ...
         }
     }
 }
 
-E:\MyWork6\Android>gradlew assembleRelease
+E:\MyWork6\Android>gradlew clean assembleRelease -info
+
+
+
+
+
+
+
+------------------------------------ÆäËû
+
+
+
+
+
+
+
+
+
+
+
+
